@@ -1,33 +1,34 @@
+//homework1
 function setup() {
-	createCanvas(windowWidth, windowHeight);
-	
+ createCanvas(480, 270);  // Set the size of the window
 }
 
 function draw() {
- // Set CENTER mode
+  background(255);  // Draw a white background 
+
+  // Set ellipses and rects to CENTER mode
   ellipseMode(CENTER);
   rectMode(CENTER); 
-  background(255);
-  // Body
-  stroke(0);
-  fill(150);
-  rect(mouseX, mouseY+30, 20, 100);
 
-  // Head
+  // Draw Zoog's body
+  stroke(0);
+  fill(175);
+  // Zoog's body is drawn at the location (mouseX, mouseY).
+  rect(mouseX, mouseY, 20, 100);
+
+  // Draw Zoog's head
+  stroke(0);
   fill(255);
-  //ellipse(240, 115, 60, 60); 
-  ellipse(mouseX, mouseY, 60, 60); 
-  
+  // Zoog's head is drawn above the body at the location (mouseX, mouseY - 30).
+  ellipse(mouseX, mouseY-30, 60, 60); 
+
   // Eyes
   fill(0); 
-  ellipse(mouseX-19, mouseY, 16, 32); 
-  ellipse(mouseX+19, mouseY, 16, 32);
+  ellipse(221, 115, 16, 32); 
+  ellipse(259, 115, 16, 32);
 
   // Legs
   stroke(0);
-  line(mouseX+10, mouseY+80, mouseX+30, mouseY+100);
-  line(mouseX-10, mouseY+80, mouseX-30, mouseY+100);
- 
-  print(1);
-  
+  line(230, 195, 220, 205);
+  line(250, 195, 260, 205);
 }
